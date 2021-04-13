@@ -39,17 +39,17 @@ Breaking one of these rules will cause you to fail the assignment:
 ### Steps
 Here is what you will need to do to complete the assignment:
 
-1. (If you haven’t already) Create a GitHub.com account and a repository that you will use for this class.
-2. (If you haven’t already) Follow the Development Setup Video (beginning of Module 1) instructions on how to create a repository and set it up such that you can host and view your finished web pages on GitHub Pages, i.e., GitHub.io domain name. You will need to provide that URL for your peer review.
-3. Create a folder in your repository that will serve as a container folder for your solution to this assignment. You can call it whatever you want. For example, `module2-solution` or `mod2_solution`, etc.
+1. `ok` (If you haven’t already) Create a GitHub.com account and a repository that you will use for this class.
+2. `ok` (If you haven’t already) Follow the Development Setup Video (beginning of Module 1) instructions on how to create a repository and set it up such that you can host and view your finished web pages on GitHub Pages, i.e., GitHub.io domain name. You will need to provide that URL for your peer review.
+3. `ok` Create a folder in your repository that will serve as a container folder for your solution to this assignment. You can call it whatever you want. For example, `module2-solution` or `mod2_solution`, etc.
   * You can do this by 'cloning' your repository with `git clone https://www.github.com/your_repo_url` to your local machine, creating `module2-solution` folder in the root of the repository directory along with a README.txt inside of the `module2-solution` directory. Then, you would do `git add .`, followed by `git commit -m 'New folder'`, followed by `git push` to upload the new folder with the README.txt to the GitHub repository.
-4. HTML/CSS for the assignment
+4. `ok with option 1` HTML/CSS for the assignment
   * Option 1: Copy the **contents** of the folder `assignment2-starter-code` into the newly created folder from the previous step. If you cloned this repository, the assignment 2 folder is located in `root_dir_of_your_local_repo/assignments/assignment2/assignment2-starter-code`
   * Option 2: Create the HTML/CSS yourself. Make sure to name the HTML file `index.html`. The only requirement is that your HTML have the required lists as described in the General Idea section. You can make the lists side by side or one under the other. The rest is up to you.
-5. Import AngularJS into your project and place a `<script>` tag right before the `</body>` tag.
-6. Declare `ng-app` either on the `html` or the `body` element. Name your app `ShoppingListCheckOff`.
-7. Create `app.js` in your project and declare an Angular module to match your `ng-app` declaration.
-8. Go back to `index.html` and declare 2 controllers using `controller as` syntax. One controller should be called `ToBuyController` and the other called `AlreadyBoughtController`. You are *required* to have 2 controllers for this assignment.
+5. `ok` Import AngularJS into your project and place a `<script>` tag right before the `</body>` tag.
+6. `ok` Declare `ng-app` either on the `html` or the `body` element. Name your app `ShoppingListCheckOff`.
+7. `ok` Create `app.js` in your project and declare an Angular module to match your `ng-app` declaration.
+8. `ok` Go back to `index.html` and declare 2 controllers using `controller as` syntax. One controller should be called `ToBuyController` and the other called `AlreadyBoughtController`. You are *required* to have 2 controllers for this assignment.
 9. You will obviously need to share data between these controllers. Go back to `app.js` and implement this data sharing using the *singleton* approach with the `.service` declaration. Call the service `ShoppingListCheckOffService`. Make sure to inject this service into both controllers so they can share data. Also, realize that your service will have to keep track of both 'to buy' and 'bought' items at the same time. (*While there is no one right way to accomplish this functionality, for this assignment, you are required to implement it as described.*)
   * (*Hint*) You can store 2 separate arrays in the service: one to hold "to buy" items and one to hold "bought" items. The reference to the "to buy" array should be placed/exposed onto the `ToBuyController` instance as some property. The reference to the "bought" items array should be placed/exposed onto the `AlreadyBoughtController` instance as some property.
   * (*Hint*) When the user clicks on the "Bought" button, simply pass the call from your (`ng-click`) controller-bound method to call the right method inside of your `ShoppingListCheckOffService` service, which removes that item from the "to buy" array and pushes it to the "bought" array.
