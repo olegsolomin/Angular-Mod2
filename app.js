@@ -42,7 +42,7 @@
         // move to bought
         service.boughtItem = function (itemIndex) {
             var item =  WTBlist.splice(itemIndex, 1);
-            ABlist.push(item);
+            ABlist.push(item[0]);
         };
         
         //Already Bought list

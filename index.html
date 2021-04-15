@@ -37,7 +37,7 @@
      <ul>
       <ul>
         <li ng-repeat="item in wtbctrl.items">
-          Buy at least {{ item.quantity}} of {{item.name}}
+          Buy at least {{item.quantity}} of {{item.name}}
           <button class="btn btn-default" ng-click="wtbctrl.boughtItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button>
         </li>
      </ul>
@@ -49,7 +49,7 @@
      <h2>Already Bought:</h2>
      <ul>
        <li ng-repeat = "item in abctrl.items">
-          Bought {{ item.quantity}} of {{item.name}}
+          Bought {{item.quantity}} of {{item.name}}
        </li>
      </ul>
      <div ng-if="abctrl.items.length==0" class="emptyMessage">Nothing bought yet.</div>
